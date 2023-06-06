@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Document</title>
+    <style>
+        body
+        {
+            margin: -45px 8px;
+
+        }
+        .container
+        {
+            /* background-color: blueviolet; */
+            height:1250px;
+            /* margin: 15px auto; */
+        }
+        .logo
+        {
+            /* background-color: aliceblue; */
+            height: 50px;
+            width: 100px;
+            margin: 55px 150px;
+            font-size:1rem;
+        }
+        .logo h1
+        {
+            text-shadow: 1.1rem 1.1rem 0.5rem black;   
+        }
+        .nav
+        {
+            width: 600px;
+            /* display: inline-block; */
+            margin-left: 450px;
+           
+
+        }
+        .nav li 
+        {
+            width: 800px;
+            display: table-cell;
+        }
+        .nav li:nth-child(1)
+        {
+            padding: 0px 25px;
+        }
+       
+        .nav li a
+        {
+            color: #333;
+            /* display: inline-block; */
+            text-decoration: none;
+            font-size: 1.3rem;
+            /* font-weight: 600; */
+        }
+        .bg
+        {
+            background-image: url("images/slide/istockphoto-1249223936-170667a.jpg");
+            /* object-fit: cover; */
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 600px;
+            width: 1330px !important;
+            box-shadow: 0.1rem 0.1rem 0.8rem black;    
+        }
+        .center
+        {
+            position: relative;
+            top: 50%;
+            font-size: 1.5rem;
+            margin: 0px 400px;
+            color: aliceblue;
+            font-family: 'Droid Serif Normal', serif;
+            font-style: oblique;
+        }
+        hr {
+            /* border-top: 1px solid #ccc; */
+            height: 0;
+            text-align: center;
+            overflow: visible;
+            width: 500px;
+            margin: 0px 5px;    
+            }
+        hr::after {
+            content: "resto restaurant home page website template";
+            background: #072e3be6;
+            color: white;
+            border-radius: 50px;
+            display: inline-block;
+            margin: 10px;
+            position: relative;
+            top: -1em;
+           
+        }
+
+        #menu h2
+        {
+            text-align: center;    
+        }
+       
+        .main-menu li
+        {
+            float: left;
+            width: 35%;
+            /* text-decoration-style: none; */
+            list-style-type: none;
+            text-align: justify;
+            padding: 20px 90px;
+            margin-bottom: 15px;
+        }
+        .dish
+        {
+            float: left;
+            color: chocolate;
+            font-weight: bold;
+            font-size: 18px;
+            font-style: italic;
+            font-weight: 900;
+            position: relative;
+            background: #fff;
+            /* padding-right: 15px; */
+            margin: 1px;
+        }
+        .price
+        {
+             color: #555;
+            float: right;
+            font-weight: bold;
+            background: #fff;
+            position: relative;
+            font-style: italic;
+            /* padding-left: 8px; */
+            font-size: 18px;
+            padding: 2px 0px;
+            margin: 0px 12px;
+        }
+        .description
+        {
+            clear: both;
+            display: block;
+            color: #999;
+            font-style: italic;
+            display: inline-block;
+            width:375px;
+            font-size: 14px;
+            padding-top: 10px;
+            border-top: 1px solid #333;
+            position: relative;
+            top: -5px;
+
+        }
+        .description span
+        {
+            margin: -50px;
+            /* color:#333; */
+        }
+        
+        .food-img
+        {
+            margin: 300px 90px;
+            height: 160px;
+            
+        }
+        .food-img li
+        {
+            list-style-type: none;
+            display: inline-block;
+            margin-left: 15px;
+        }
+        .food-img img
+        {
+            width: 230px;
+            height: 180px; 
+            object-fit: cover;    
+            box-shadow: 0.1rem 0.1rem 0.8rem black;    
+            /* float: left; */
+        }
+        .img-dish a
+        {
+            color: #333;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+            font-style: italic;
+        }
+        .img-dish span
+        {
+            margin-left: 150px;
+            color: #333;
+            font-size: 18px;
+            font-weight: 600;
+            font-style: italic;
+        }
+
+        .footer
+        {
+            background-color: #333;
+            /* padding: 10px 0; */
+            height: 185px;
+            border:5px solid #333;
+            box-shadow: 0.1rem 0.1rem 0.8rem black;    
+            
+        }
+        .contact li
+        {
+            display: inline-block;
+            /* width: 315px; */
+            color: #fff;
+            font-size: 15px;
+            font-weight: 600;
+            width: 120px;
+            margin-left: 60px;
+            padding: 0px 50px;
+        }
+        .contact li a
+        {
+            /* width: 315px; */
+            color: #fff;
+            font-size: 15px;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .foot
+        {
+            background: black;
+            height: 20px;
+            border:1px solid grey;
+        }
+        @media (min-width:600px) {
+          .container
+            {
+                width: 1320px !important;
+            }
+            .dish
+            {
+                margin: 2px;
+            }
+            .price
+            {
+                padding: 2px 13px;
+                 margin: 0px -20px;
+            }
+            .description
+            {
+                top: -6px;
+            }
+        }
+        @media (min-width:480px) {
+          .container
+            {
+                width: 1320px !important;
+            }
+            .dish
+            {
+                margin: 2px;
+            }
+            .price
+            {
+                padding: 2px 13px;
+                 margin: 0px -20px;
+            }
+            .description
+            {
+                top: -6px;
+            }
+        }
+      
+        @media (min-width:240px) {
+          .container
+            {
+                width: 1320px !important;
+            }
+            .dish
+            {
+                margin: 2px;
+            }
+            .price
+            {
+                padding: 2px 13px;
+                 margin: 0px -20px;
+            }
+            .description
+            {
+                top: -6px;
+            }
+        }
+        @media (min-width:0px) {
+          .container
+            {
+                width: 1320px !important;
+            }
+            .dish
+            {
+                margin: 2px;
+            }
+            .price
+            {
+                padding: 2px 13px;
+                 margin: 0px -20px;
+            }
+            .description
+            {
+                top: -6px;
+            }
+        }
+        @media(min-width: 1280px)  {
+            .container
+            {
+                width: 1320px !important;
+            }
+            .dish
+            {
+                margin: 2px;
+            }
+            .price
+            {
+                padding: 2px 13px;
+                 margin: 0px -20px;
+            }
+            .description
+            {
+                top: -6px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <header>
+        <div class="logo"><h1>Restro</h1>
+            <div class="navbar">
+                <div class="nav">
+                    <ul>
+                        <li><a href="#">Our Story</a></li>
+                        <li><a href="#">Menu</a></li>
+                        <li><a href="#">Reservations</a></li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Reviews</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+       <div class="bg bg-res">
+            <div class="center">
+                <h1>This Template is Awesome</h1>
+                <hr/>
+            </div>
+        </div>
+           
+    </header>
+    <div id="menu"><h2>Menu</h2>
+        <div class="main-menu">
+            <ul>
+            <li>
+                <span class="dish">Dish 1</span>
+                <span class="price">100</span><br/>
+                <span class="description"><span>Cheese, tomato, mushrooms, onions</span></span>
+            </li>
+            <li>
+                <span class="dish">Dish 2</span>
+                <span class="price">100</span><br/>
+                <span class="description"><span>Cheese, tomato, mushrooms, onions</span></span>
+            </li>
+            <li>
+                <span class="dish">Dish 3</span>
+                <span class="price">100</span><br/>
+                <span class="description"><span>Cheese, tomato, mushrooms, onions</span></span>
+            </li>
+            <li>
+                <span class="dish">Dish 4</span>
+                <span class="price">100</span><br/>
+                <span class="description"><span>Cheese, tomato, mushrooms, onions</span></span>
+            </li>
+            <li>
+                <span class="dish">Dish 5</span>
+                <span class="price">100</span><br/>
+                <span class="description"><span>Cheese, tomato, mushrooms, onions</span></span>
+            </li>
+            <li>
+                <span class="dish">Dish 6</span>
+                <span class="price">100</span><br/>
+                <span class="description"><span>Cheese, tomato, mushrooms, onions</span></span>
+            </li>
+            <li>
+                <span class="dish">Dish 7</span>
+                <span class="price">100</span><br/>
+                <span class="description"><span>Cheese, tomato, mushrooms, onions</span></span>
+            </li>
+            <li>
+                <span class="dish">Dish 8</span>
+                <span class="price">100</span><br/>
+                <span class="description"><span>Cheese, tomato, mushrooms, onions</span></span>
+            </li>
+            
+            </ul>
+        </div>
+    </div>
+
+    <div class="food-img">
+        <ul>
+            <li><img src="images/slide/tasty-butter-chicken-curry-dish-from-indian-cuisine-1277362334.jpg" alt="curry">
+               <div class="img-dish"><a href="#">Dish 1</a>
+                    <span>100</span>
+                </div>
+            </li>
+            <li><img src="images/slide/curry-7249247__340.jpg" alt="curry2">
+                <div class="img-dish"><a href="#">Dish 2</a>
+                    <span>100</span>
+                </div>
+            </li>
+            <li><img src="images/slide/jcliv9dg_shahi-paneer_625x300_15_March_22.jpg" alt="paneer">
+               <div class="img-dish"><a href="#">Dish 3</a>
+                    <span>100</span>
+                </div> 
+            </li>
+            <li><img src="images/slide/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg" alt="morzarella">
+                <div class="img-dish"><a href="#">Dish 4</a>
+                <span>100</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <footer class="ft">
+    <div class="footer">
+     <div class="contact">   
+            <ul>
+                <li>Old Restaurant</li>
+                <li>New Restaurant</li>
+                <li><a href="">Blog</a></li>
+                <li><img src="images/slide/logo_footer.png" alt="logo"></li>
+            </ul> 
+            <ul>
+                <li>Saharanpur</li>
+                <li>Brillica Services</li>
+                <li><a href="">Careers</a></li>
+                <li>© All Rights Reserved to User</li>
+            </ul> 
+            <ul>
+                <li>247001</li>
+                <li>Dehradun</li>
+                <li><a href="">Privacy Policy</a></li>
+                <li></li>
+            </ul>   
+            <ul>
+                <li>718-749-1714</li>
+                <li>718-749-1714</li>
+                <li><a href="">Contact</a></li>
+                <li></li>
+            </ul> 
+        </div>
+    </div>
+   
+    <div class="foot">
+
+    </div>
+</footer>
+</div>
+
+</body>
+</html>
